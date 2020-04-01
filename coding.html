@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding</title>
+    <link rel="stylesheet" href="/css/style-coding.css" id="css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    
+    <div class="menu">
+        <a id="coding" href="coding.html">Coding
+        </a><a id="music" href="music.html">Music
+        </a><a id="blog" href="blog.html">Blog
+        </a><a id="aboutme" href="aboutme.html">AboutMe</a>
+    </div>
+
+    <div class="show_skills">
+        <div class="show_text wrap-text flex-center">
+            Currently my coding skills include: 
+            Algorithm | Ruby | Python | Html | CSS 
+        </div>
+        <div class="linkedlogo flex-center">
+            <a href="https://github.com/bcehmu/improv-freestyle"><img src="/graphics/ruby.png"></a>
+            <a href=""><img src="/graphics/python-logo-generic.svg"></a>
+            <a href=""><img src="/graphics/html5.svg"></a>
+            <a href=""><img src="/graphics/css.svg"></a>
+        </div>
+
+        <div class="show_text  wrap-text flex-center">
+            Primality-test example:
+        </div>
+
+        <div class="show_text  wrap-text flex-center">
+            
+            <ul>
+                <li>Although there exists deterministic primality test algorithm in polynomial time (but galatic) such as AKS primality test, 
+                    I would write an determinisitic, simple algorithm that could be easily understood without much mathematical theory. </li>
+                <li>Main idea: Building a array of prime numbers from small integers upwardly. 
+                    By prime number theorem, probability of appearence of prime numbers less than integer n is about \(1\over log(n)\), 
+                    then to test if n is prime is to test if previously saved prime numbers smaller than n could divide n, 
+                    in about \(n \over log(n)\) times. 
+                    But bulding upwardly means every possible larger integer should be tested, odd number at least, 
+                    since \(2n+1\) and \(2n+3\) (Twin prime) could be infinitely many.</li>
+                <li>An optimization could be achieved by noticing 
+                    every composite number has at least one factor less-or-equal to \(\sqrt{n}\). 
+                    Hence to check \(n\) 's primality, 
+                    we only need to check if every prime less-or-equal to \(\sqrt{n}\) is a factor.</li>
+                <li>Theoretically, this method takes \( {n \over 2} \times {\sqrt{n} \over log(\sqrt{n})} \) times, but when n is very big, every single operation such as division is galatic.</li>
+            </ul>
+        </div>
+        
+        <code class="language-ruby"><pre>
+    def building_prime_array(bound)
+    array_prime = [2]
+    for i in (1..((bound-1)/2)) do
+        prime = true
+        search_bnd = Integer.sqrt(2*i+1)
+        array_prime.each do |saved_prime|
+            if saved_prime > search_bnd
+                break
+            end
+            if (2*i+1) % saved_prime == 0
+            prime = false
+            end
+        end
+        if prime == true
+            array_prime.push(2*i+1)
+        end
+    end
+    return array_prime
+    end
+        </pre></code>
+        </div>
+</body>
+</html>

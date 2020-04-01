@@ -1,0 +1,157 @@
+
+/* #4AB714; for cat eyes */
+
+body {
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.canvas_container {
+    /* background-image: linear-gradient(30deg,rgba(0,0,0,1),rgba(0,0,70,0.9)); */
+    
+    background:linear-gradient(45deg,#000020,#050540,#101060,#908020);
+    animation: menu_grad 9s ease infinite alternate;
+    background-size: 400% 400%;
+
+    /* justify-content: center; */
+    display: grid;
+    grid-template-areas: 
+        ". . . . ."
+        ". menu_coding . menu_music ."
+        ". . owl . ."
+        ". menu_blog . menu_aboutme ."
+        ". . . . .";
+    grid-template-columns: 20%,20%,20%,20%,20%;
+    grid-template-rows: 15%,20%,30%,20%,15%;
+    
+    /* background-image: linear-gradient(30deg,rgba(0,0,0,1),rgba(0,0,150,0.8)); */
+    /* min-width: 600px;
+    min-height: 600px; */
+
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    
+    text-align: center;
+    
+    /* color: white; */
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+.menu_item {
+    padding: 2em 1em 2em 1em;
+    color: #053677;
+    
+}
+.menu_item:hover {
+    background-color: rgba(200,200,10,0.9);
+}
+@keyframes menu_grad {
+    25% {background-position: 0% 25%;}
+    50% {background-position: 100% 50%;}
+    75% {background-position: 50% 25%;}
+    100% {background-position: 75% 0%;}
+}
+
+#menu_coding {
+    grid-area: menu_coding;
+    border-radius: 0% 0% 30% 0%;
+    border: 2px solid #053677;  
+}
+#menu_music {
+    grid-area: menu_music;
+    border-radius: 0% 0% 0% 30%;
+    border: 2px solid #053677;
+}
+#menu_blog {
+    grid-area: menu_blog;
+    border-radius: 0% 30% 0% 0%;
+    border: 2px solid #250202;
+}
+#menu_aboutme {
+    grid-area: menu_aboutme;
+    border-radius: 30% 0% 0% 0%;
+    border: 2px solid #250202;
+}
+#menu_blog a, #menu_aboutme a {
+    color: #403030;
+}
+
+.canvas_container a {
+    /* display: flex;*/
+    justify-content: center; 
+    font-weight: bolder;
+    font-size: larger;
+    color: #043680;
+    text-decoration: none;
+    
+    
+    margin: 0px;
+    /* border: 1px solid white; */
+    /* padding: 2em 0em 2em 0em; */
+}
+
+#owl {
+    grid-area: owl;
+    /* display: flex;
+    flex-direction: column; */
+    /* display: block; */
+    /* justify-content: center;  */
+
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    position: relative;
+    width: 100%;
+    background-image: url("/graphics/owl-body-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 5vh;
+    
+}
+
+#owl img {
+    max-width: 20vh;
+    height: auto;
+
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    
+}
+
+@keyframes turning {
+    25% {transform: rotate(-45deg);}
+    50% {transform: rotate(-135deg);}
+    75% {transform: rotate(45deg);}
+    100% {transform: rotate(135deg);}
+    /* 100% {transform: rotate(0deg);} */
+}
+
+#owl-head {
+    z-index: 1;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    position: relative;
+    /* top: 10vh; */
+    
+
+    animation: turning 3s infinite alternate;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+/* #owl-body {
+    z-index: 0;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    top: -17vh;
+    left: 3vh;
+    object-fit: contain;
+} */
