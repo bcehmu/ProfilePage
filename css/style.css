@@ -105,7 +105,7 @@ body {
 
     position: relative;
     width: 100%;
-    background-image: url("/graphics/owl-body-bg.svg");
+    background-image: url("https://bcehmu.github.io/ProfilePage/graphics/owl-body-bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 5vh;
