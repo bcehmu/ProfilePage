@@ -1,0 +1,134 @@
+/* This theme use green yellow as the main colors to create a foresty feel.
+*/
+body {
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.canvas_container {
+    
+    background:linear-gradient(45deg, green, #3fe763, #e6ba44, rgb(255, 157, 0));
+    animation: menu_grad 18s ease infinite alternate;
+    background-size: 400% 400%;
+
+    display: grid;
+    grid-template-areas: 
+        ". . . . ."
+        ". menu_coding . menu_music ."
+        ". . owl . ."
+        ". menu_blog . menu_aboutme ."
+        ". . . . .";
+    grid-template-columns: 20%,20%,20%,20%,20%;
+    grid-template-rows: 15%,20%,30%,20%,15%;
+    
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    
+    text-align: center;
+
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+.menu_item {
+    padding: 2em 1em 2em 1em;
+    color: aliceblue;
+    
+}
+.menu_item:hover {
+    background-color: rgba(200,200,10,0.9);
+}
+@keyframes menu_grad {
+    25% {background-position: 0% 25%;}
+    50% {background-position: 100% 50%;}
+    75% {background-position: 50% 25%;}
+    100% {background-position: 75% 0%;}
+}
+
+#menu_coding {
+    grid-area: menu_coding;
+    border-radius: 0% 0% 30% 0%;
+    border: 2px solid aliceblue;  
+}
+#menu_music {
+    grid-area: menu_music;
+    border-radius: 0% 0% 0% 30%;
+    border: 2px solid aliceblue;
+}
+#menu_blog {
+    grid-area: menu_blog;
+    border-radius: 0% 30% 0% 0%;
+    border: 2px solid aliceblue;
+}
+#menu_aboutme {
+    grid-area: menu_aboutme;
+    border-radius: 30% 0% 0% 0%;
+    border: 2px solid aliceblue;
+}
+#menu_blog a, #menu_aboutme a, #menu_coding a, #menu_music a  {
+    color: aliceblue;
+}
+
+.canvas_container a {
+    /* display: flex;*/
+    justify-content: center; 
+    font-weight: bolder;
+    font-size: larger;
+    color: #043680;
+    text-decoration: none;
+    
+    
+    margin: 0px;
+    /* border: 1px solid white; */
+    /* padding: 2em 0em 2em 0em; */
+}
+
+#owl {
+    grid-area: owl;
+    
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    position: relative;
+    width: 100%;
+    background-image: url("/graphics/owl-body-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 5vh;
+    
+}
+
+#owl img {
+    max-width: 20vh;
+    height: auto;
+
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    
+}
+
+@keyframes turning {
+    25% {transform: rotate(-45deg);}
+    50% {transform: rotate(-135deg);}
+    75% {transform: rotate(45deg);}
+    100% {transform: rotate(135deg);}
+}
+
+#owl-head {
+    z-index: 1;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    position: relative;
+    /* top: 10vh; */
+    
+
+    animation: turning 3s infinite alternate;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
