@@ -8,7 +8,7 @@ body {
 
 .canvas_container {
     
-    background:linear-gradient(45deg,#000020,#050540,#101060,#908020);
+    background:linear-gradient(45deg, white, aliceblue,rgb(105, 141, 207),#908020);
     animation: menu_grad 18s ease infinite alternate;
     background-size: 400% 400%;
 
@@ -27,7 +27,7 @@ body {
     margin: 0px;
     
     text-align: center;
-    
+
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
@@ -86,7 +86,7 @@ body {
 
 #owl {
     grid-area: owl;
-
+    
     border: 0px;
     padding: 0px;
     margin: 0px;

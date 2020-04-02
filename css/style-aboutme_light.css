@@ -1,4 +1,4 @@
-/* This theme is the first version, use purple gradient.
+/* This theme use aliceblue and white as the main colors
 */
 
 body {
@@ -24,7 +24,7 @@ body {
 
     font-size: medium;
 
-    background: linear-gradient(90deg, #6666CC, #999966);
+    background: linear-gradient(90deg, aliceblue, white);
 }
 
 #coding {
@@ -71,11 +71,11 @@ body {
 
 #frontpage {
     grid-area: p;
-    background: linear-gradient(45deg, #111111,#c7ec20, #be8ddf, #07194b);
+    background: linear-gradient(45deg, white,aliceblue,rgb(144, 208, 238));
     width: 100vw;
 
     background-size: 400% 400%;
-	animation: bg_grad 10s ease infinite alternate;
+	animation: bg_grad 18s ease infinite alternate;
 
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;

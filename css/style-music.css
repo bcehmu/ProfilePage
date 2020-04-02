@@ -69,7 +69,13 @@ body {
     color: rgba(0, 0, 0, 1);
 }
 
+section {
+    grid-area: content;
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .media_embed {
     grid-area: content;
@@ -77,5 +83,4 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
 }

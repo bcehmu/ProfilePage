@@ -4,33 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding</title>
-    <link rel="stylesheet" href="https://bcehmu.github.io/ProfilePage/css/style-coding.css" id="css">
+    <link rel="stylesheet" href="/css/style-coding_light.css" id="css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    
+    <!-- 
+        This page is for some info about my coding.
+        Embeded TeX-like formular with MathJax.
+    -->
+
+    <!-- Menu at top in each page with same layout. -->
+    <nav>
     <div class="menu">
         <a id="coding" href="coding.html">Coding
         </a><a id="music" href="music.html">Music
         </a><a id="blog" href="blog.html">Blog
         </a><a id="aboutme" href="aboutme.html">AboutMe</a>
     </div>
-
-    <div class="show_skills">
+    </nav>
+    
+    <section class="show_skills">
         <div class="show_text wrap-text flex-center">
             Currently my coding skills include: 
             Algorithm | Ruby | Python | Html | CSS 
         </div>
-        <div class="linkedlogo flex-center">
-            <a href="https://github.com/bcehmu/improv-freestyle"><img src="/graphics/ruby.png"></a>
-            <a href=""><img src="https://bcehmu.github.io/ProfilePage/graphics/python-logo-generic.svg"></a>
-            <a href=""><img src="https://bcehmu.github.io/ProfilePage/graphics/html5.svg"></a>
-            <a href=""><img src="https://bcehmu.github.io/ProfilePage/graphics/css.svg"></a>
+
+        <figure class="linkedlogo flex-center">
+            <a href=""><img src="/graphics/ruby.png"></a>
+            <a href=""><img src="/graphics/python-logo-generic.svg"></a>
+            <a href=""><img src="/graphics/html5.svg"></a>
+            <a href=""><img src="/graphics/css.svg"></a>
+        </figure>
+        
+        <div class="show_text linkedlogo wrap-text flex-center">
+            my Github repository -> &nbsp;&nbsp;
+            
+            <a href="https://github.com/bcehmu/improv-freestyle"><img src="/graphics/github-logo.svg"></a>
         </div>
 
+
         <div class="show_text  wrap-text flex-center">
-            Primality-test example:
+            my code example, a simple primality-test algorithm in Ruby:
         </div>
 
         <div class="show_text  wrap-text flex-center">
@@ -52,7 +67,7 @@
             </ul>
         </div>
         
-        <code class="language-ruby"><pre>
+    <code class="language-ruby"><pre>
     def building_prime_array(bound)
     array_prime = [2]
     for i in (1..((bound-1)/2)) do
@@ -72,7 +87,8 @@
     end
     return array_prime
     end
-        </pre></code>
-        </div>
+    </pre>
+    </code>
+    </section>
 </body>
 </html>

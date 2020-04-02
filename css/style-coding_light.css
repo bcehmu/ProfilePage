@@ -1,9 +1,9 @@
 /*
-This Theme for black background and blue text, example code in green.
-Trying to mimic an enviroment like IDE. 
+This Theme for white background and black/bluish text, example code in green.
+Trying to mimic an enviroment of white background like IDE. 
  */
 
-body {
+ body {
     grid-template-areas: 
     " menu menu menu menu "
     " p p p p"
@@ -17,9 +17,9 @@ body {
 
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 
-    background-color: black;
-    color: #3687b9;
-    /* font-weight: bolder; */
+    background-color: white;
+    color: #225599;
+    font-weight: bolder;
 }
 .menu {
     grid-area: menu;
@@ -28,7 +28,7 @@ body {
     font-size: medium;
     padding: 1em 0em ;
 
-    background:  #999999;
+    background:  aliceblue;
     background-clip: text;
 
 }
@@ -63,7 +63,7 @@ body {
     background-clip: border-box;
 }
 .menu a:hover {
-    background-color: #555555;
+    background-color: #d5f79e;
 
 }
 .menu a:visited {
@@ -109,7 +109,7 @@ body {
 }
 
 code {
-    background: linear-gradient(225deg,#AAAAAA, #CCCCCC);
+    background: linear-gradient(225deg,#222222, #444444);
     width: 80vw;
 }
 pre {
