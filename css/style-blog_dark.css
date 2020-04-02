@@ -1,0 +1,166 @@
+/* This Theme for black background and blue text, example code in green. Trying to mimic an enviroment like IDE. 
+*/
+
+body {
+    background-color: black;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    color: #3687b9;
+    display: grid;
+    grid-template-areas: 
+        "menu menu menu menu menu menu menu menu"
+        "welcome welcome welcome welcome welcome welcome welcome welcome"
+        "tools content content content content content content content";
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: 10%,90%;
+    width: 100vw;
+}
+
+
+nav .menu {
+    grid-area: menu;
+
+    width: 100vw;
+    overflow: hidden;
+    margin: 0px;
+    border: 0px;
+    padding: 1em 0em ;
+
+    background: linear-gradient(90deg, aliceblue, #666666);
+    
+}
+#coding {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    border-right: 1px solid black;
+
+}
+#music {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    border-right: 1px solid black;
+
+}
+#blog {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    border-right: 1px solid black;
+
+}
+#aboutme {
+    grid-row: 1/2;
+    grid-column: 4/5;
+
+}
+nav a {
+    color: #3687b9;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin: 0px;
+    border: 0px;
+    padding: 0em 1em;
+}
+nav a:hover {
+    background-color: rgba(200,200,10,0.9);
+    background-clip: padding-box;
+    color: #3687b9;
+}
+nav a:visited {
+    color: #3687b9;
+}
+
+.welcome {
+    grid-area: welcome;
+    margin: 0px;
+    border: 0px;
+    padding: 2em 0em 2em 1em;
+    /* background-color: bisque; */
+    background-image: linear-gradient(90deg, rgba(255,228,196,0.1), rgba(255,228,196,1));
+    width: 100vw; 
+
+}
+
+.tools_icon {
+    grid-area: tools;
+    position: fixed;
+    top: 30em;
+    color: aliceblue;
+}
+.tools_icon a {
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: larger;
+}
+.ToTop:visited {
+    color: aliceblue;
+}
+
+
+
+
+.blog_content {
+    grid-area: content;
+    width: 90vw;
+    
+}
+
+.article {
+    border-bottom: 4px dashed aliceblue;
+    display: block;    
+}
+
+.article p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.article_title {
+    /* display: block; */
+    font-weight: bolder;
+}
+
+.label_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.label {
+    /* the labels under title for categorization */
+    /* display: inline-block; */
+
+    color: black;
+    background-color: #3687b9;
+    /* border: 2px solid rgba(255,228,196,0.5); */
+    border-radius: 15%;
+    padding: 4px;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+
+}
+
+.label:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+
+
+.timestamp {
+    font-family: cursive;
+    color: grey;
+}
+
+.article img {
+    
+    height: 30vh;
+    width: auto;
+
+}
